@@ -5,6 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+    $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+</script>
 </head>
 <body>
 <header>
@@ -65,24 +71,28 @@
 <div id="mask">
 </div>
 
-<script>
-$(document).ready(function() { 
-	$("#popup").fadeIn(700);
-	var maskHeight = $(document).height();
-    var maskWidth = $(window).width();
-    
-    //Set height and width to mask to fill up the whole screen
-    $('#mask').css({'width':maskWidth,'height':maskHeight});
-        
-    //transition effect        
-    $('#mask').fadeIn(1000);
-	
-	$(".close-popup").click(function(){
-	$("#popup").hide();
-	$("#mask").hide();
-	});
-});
-</script>
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="refer-btn">
+	<h2>Refer a Friend?</h2>
+	<p>Refer a friend and receive a $7 gift card.<br />
+	Your friend will receive 50% off!</p>
+    <div class="refer-btn green close-popup">
+	    <a href="refer.html">
+		    Yes, do it now!
+	    </a>
+    </div>
+	<div  class="refer-btn red" data-dismiss="modal">
+		<a href="#">No thanks</a>
+	</div>
+	</div>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 </body>
 </html>
