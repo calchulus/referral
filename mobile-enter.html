@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="main.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css" />
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+</head>
+<body>
+<header>
+	<img src="img/logo.png" class="center" />
+</header>
+	<div id="btn-container" class="center">
+		<a href="refer.html"><div class="refer-btn refer-btn-big">
+		<img src="img/icon-ml.png" class="icon" />
+		Refer a friend and receive a $7 gift card.<br />
+		Your friend will receive 50% off!
+		</div></a>
+		
+		<a href="#"><div class="refer-btn">
+		<img src="img/icon-y.png" class="icon" />
+		<img src="img/icon-yelp.png" class="icon" />
+		<img src="img/icon-g.png" class="icon" />
+		Write a Review
+		</div></a>
+		
+		<a href="#"><div class="refer-btn">
+		<img src="img/icon-ml.png" class="icon" />
+		See our Reviews
+		</div></a>
+		
+		<a href="#"><div class="refer-btn">
+		<img src="img/icon-ml.png" class="icon" />
+		Join Our Email Coupon Club
+		</div></a>
+		
+		<a href="#"><div class="refer-btn">
+		<img src="img/icon-f.png" class="icon" />
+		Like Us on Facebook
+		</div></a>
+		
+		<a href="#"><div class="refer-btn">
+		<img src="img/icon-gp.png" class="icon"/>
+		Follow Us on Google+
+		</div></a>
+	</div>
+	
+<!--Pop up-->
+<div id="popup">
+	<div class="refer-btn">
+	<h2>Refer a Friend?</h2>
+	<p>Refer a friend and receive a $7 gift card.<br />
+	Your friend will receive 50% off!</p>
+    <div class="refer-btn green close-popup">
+	    <a href="#">
+		    Yes, do it now!
+	    </a>
+    </div>
+	<div  class="refer-btn red close-popup">
+		<a href="#">No thanks</a>
+	</div>
+	</div>
+</div>
+
+<div id="mask">
+</div>
+
+<script>
+$(document).ready(function() { 
+	$("#popup").fadeIn(700);
+	var maskHeight = $(document).height();
+    var maskWidth = $(window).width();
+    
+    //Set height and width to mask to fill up the whole screen
+    $('#mask').css({'width':maskWidth,'height':maskHeight});
+        
+    //transition effect        
+    $('#mask').fadeIn(1000);
+	
+	$(".close-popup").click(function(){
+	$("#popup").hide();
+	$("#mask").hide();
+	});
+});
+</script>
+
+</body>
+</html>
